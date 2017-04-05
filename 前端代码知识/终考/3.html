@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="./jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var a = 'asaj。kld，sao。ido.as南,沙低价搜.的话啊,搜到大家';
+      console.log("文本长度为"+a.length);
+
+      var s = /[^\x00-\xff]/g;
+      var ss = /[\x00-\xff]/g;
+      var b = null;
+      var bb = null;
+      var c = "";
+      var cc = "";
+      while ((b = s.exec(a)) !=null) {
+        c += b[0];
+      };
+      while ((bb = ss.exec(a)) !=null) {
+        cc += bb[0];
+      };
+      var zhi = c.length;
+      var zhijie = cc.length;
+      console.log("文本字节为"+(zhi*2+zhijie));
+    </script>
+  </body>
+</html>

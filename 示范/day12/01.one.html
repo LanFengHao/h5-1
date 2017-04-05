@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>one绑定事件</title>
+</head>
+
+<body>
+    <button id="btn">点击</button>
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script>
+    $(function() {
+
+/*        $("#btn").one("click", function(event) {
+            console.log("click exec only one...");
+        });
+*/
+
+        function clickHandler(event) {
+            console.log("only one...");
+            $("#btn").off("click", clickHandler);
+        }
+
+        $("#btn").on("click", clickHandler);
+
+    });
+    </script>
+</body>
+
+</html>

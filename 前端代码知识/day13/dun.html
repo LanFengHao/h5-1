@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body{
+      background-color: #5ebc5e;
+    }
+    .da{
+      width: 500px;
+      height: 600px;
+      margin:200px auto;
+      transition: all 1s ease;
+    }
+    .dunp1{
+      transform: rotate(50deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp2{
+      transform: rotate(150deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp3{
+      transform: rotate(250deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp4{
+      transform: rotate(450deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp5{
+      transform: rotate(190deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp6{
+      transform: rotate(70deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp7{
+      transform: rotate(-200deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp8{
+      transform: rotate(-200deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .dunp9{
+      transform: rotate(-545deg) translate(-360px,200px);
+      opacity: 0;
+    }
+    .hover{
+      transform:none;
+      opacity: 1;
+      transition: all 3s ease;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="da">
+      <img src="./13-image/img1/shield_1_01.png" alt="" class="dunp1">
+      <img src="./13-image/img1/shield_1_02.png" alt="" class="dunp2">
+      <img src="./13-image/img1/shield_1_03.png" alt="" class="dunp3">
+      <img src="./13-image/img1/shield_1_04.png" alt="" class="dunp4">
+      <img src="./13-image/img1/shield_1_05.png" alt="" class="dunp5">
+      <img src="./13-image/img1/shield_1_06.png" alt="" class="dunp6">
+      <img src="./13-image/img1/shield_1_07.png" alt="" class="dunp7">
+      <img src="./13-image/img1/shield_1_08.png" alt="" class="dunp8">
+      <img src="./13-image/img1/shield_1_09.png" alt="" class="dunp9">
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".da").hover(function hoverHandlerOne() {
+          $(".da img").addClass("hover")
+        },function() {
+          $(".da img").removeClass("hover");
+        });
+      })
+    </script>
+  </body>
+</html>

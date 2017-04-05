@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery操作表单</title>
+  </head>
+  <body>
+
+    <form action="" method="get">
+      <input type="text">
+      <input type="password">
+      <input checked value="100" type="checkbox">
+      <input type="checkbox">
+      <input type="radio">
+      <input type="button" value="按钮1">
+      <button>按钮2</button>
+
+      <!-- accept为上传文件的类型  -->
+      <input type="file" accept="image/*">
+    </form>
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("form :button").css("backgroundColor", "red");
+        console.log($("form :checked"));
+        $("form :file").css({"backgroundColor": "red", "border": "1px solid yellow"});
+      });
+    </script>
+  </body>
+</html>

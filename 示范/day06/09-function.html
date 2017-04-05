@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>function</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+       var a = 10, b = 20;
+
+       var result = sum(a,b);
+       console.log("result = " + result);
+
+
+       //函数的声明会被提升到代码的顶部
+       function sum(arg1, arg2){
+         //返回计算结果
+         //一个函数只能有一个return有效，return之后的代码不在执行
+         return arg1 + arg2;
+        // return; //undefined
+       }
+
+
+    </script>
+
+  </body>
+</html>

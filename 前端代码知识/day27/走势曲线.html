@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    </center>
+
+
+    <script type="text/javascript">
+      var can = document.getElementById('canvas');
+      var ctx = can.getContext("2d");
+      ctx.beginPath();
+      ctx.strokeStyle = "#333";
+      for (var i = 0; i <500;) {
+        i+=10;
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,500);
+        ctx.moveTo(0,i);
+        ctx.lineTo(500,i);
+        i+=10;
+      }
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 5;
+      ctx.moveTo(50,50);
+      ctx.lineTo(50,450);
+      ctx.moveTo(80,80);
+      ctx.lineTo(50,50);
+      ctx.moveTo(20,80);
+      ctx.lineTo(50,50);
+      ctx.stroke();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.strokeStyle = "blue";
+      ctx.lineWidth = 5;
+      ctx.moveTo(50,450);
+      ctx.lineTo(100,360);
+      ctx.lineTo(180,280);
+      ctx.lineTo(220,50);
+      ctx.lineTo(240,320);
+      ctx.lineTo(360,90);
+      ctx.lineTo(400,70);
+
+      ctx.lineTo(450,130);
+
+
+
+      ctx.moveTo(50,450);
+      ctx.lineTo(450,450);
+
+      ctx.moveTo(420,420);
+      ctx.lineTo(450,450);
+
+      ctx.moveTo(420,480);
+      ctx.lineTo(450,450);
+      ctx.stroke();
+    </script>
+  </body>
+</html>

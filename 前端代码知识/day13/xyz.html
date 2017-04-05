@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      img{
+        display: block;
+        margin: 100px auto;
+        transition: all 3s ease;
+      }
+      body{
+        transform-style: preserve-3d;
+        perspective: 0px;
+      }
+      .zhan1:hover{
+        transform: rotateX(1360deg);
+        transform-origin:center;
+
+      }
+      .zhan2:hover{
+        transform: rotateY(1360deg);
+        transform-origin: 0 30px;
+      }
+      .zhan3:hover{
+        transform: rotateZ(1360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./13-image/img2/x.jpg" alt="" class="zhan1">
+    <img src="./13-image/img2/y.jpg" alt="" class="zhan2">
+    <img src="./13-image/img2/z.jpg" alt="" class="zhan3">
+  </body>
+</html>

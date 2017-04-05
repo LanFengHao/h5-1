@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .alert {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div><input class="name" type="text"> <span class="alert">请输入中文姓名</span>
+    </div>
+    <button class="btn">点击获得焦点</button>
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $(".name").focus(function(){
+          console.log("获得焦点。。。。");
+          $(".alert").css("visibility", "visible");
+        }).blur(function(){
+          console.log("失去焦点....");
+          $(".alert").css("visibility", "hidden");
+        });
+
+        $(".btn").click(function(){
+          $(".name").focus();
+        });
+      });
+
+
+
+
+
+
+      (function(){
+        console.log("helloworld");
+      })();
+    </script>
+  </body>
+</html>

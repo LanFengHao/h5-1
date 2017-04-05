@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .box{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      // var time = new Date();
+      // var n = time.getFullYear ();
+      // var y = time.getMonth ();
+      // var r = time.getDate ();
+      // var s = time.getHours ();
+      // var f = time.getMinutes ();
+      // var m = time.getSeconds ();
+    //   $(".box").html("<p>现在是"+n+"年"+y+"月"+r+"日"+s+"时"+f+"分"+m+"秒</p>");
+
+    setInterval(xunHuan, 1000);
+
+    function xunHuan() {
+      var time = new Date();
+      var s = time.getHours ();
+      var f = time.getMinutes ();
+      var m = time.getSeconds ();
+       var oDate1 = (time.toLocaleDateString()).split("/")
+      //  console.log(oDate1);
+       var oDate2 = "2017/11/11".split("/")
+      //  console.log(oDate2);
+       var strDateS = new Date(oDate1[0], oDate1[1], oDate1[2]);
+       var strDateE = new Date(oDate2[0], oDate2[1] , oDate2[2]);
+      //  console.log(strDateS);
+      //  console.log(strDateE);
+      //  console.log(strDateE - strDateS);
+       iDays = parseInt(Math.abs(strDateE - strDateS ) / 1000 / 60 / 60 /24)//把相差的毫秒数转换为天数
+      //  console.log(iDays);
+       var sd = 24-s-1;
+       var fd = 60-f-1;
+       var md = 60-m;
+       $(".box").html("<p>现在距离双十一还有"+iDays+"天"+sd+"小时"+fd+"分"+md+"秒</p>");
+     };
+    xunHuan()
+
+    </script>
+  </body>
+</html>

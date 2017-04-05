@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .box{
+        height: 600px;
+        width: 600px;
+        text-align: center;
+        position: relative;
+        margin: auto;
+      }
+      .box-z{
+        display: block;
+        position: absolute;
+      }
+      .box-s{
+        position: absolute;
+        transform:translate(-50%,0);
+      }
+      .box-f{
+        position: absolute;
+        transform:translate(-50%,0);
+      }
+      .box-m{
+        position: absolute;
+        transform:translate(-50%,0);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+    <img src="./21-work/clock.jpg" alt="" class="box-z" name="z"/>
+    <img src="./21-work/hour.png" alt="" class="box-s" name="s"/>
+    <img src="./21-work/minute.png" alt="" class="box-f" name="f"/>
+    <img src="./21-work/second.png" alt="" class="box-m" name="m"/>
+
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    time()
+    setInterval(time, 1000);
+    function time() {
+      var z = new Date();
+      // console.log(z.getSeconds());
+      var m = z.getSeconds();
+      var md = m*6;
+      // console.log(md);
+      $(".box-m").css({'transform':' translate(-50%,0) rotate('+md+'deg)'});
+      var f = z.getMinutes();
+      var fd = f*6+m*0.1;
+      $(".box-f").css({'transform':' translate(-50%,0) rotate('+fd+'deg)'});
+      var s = z.getHours();
+      var sd = s*30+f*0.5;
+      $(".box-s").css({'transform':' translate(-50%,0) rotate('+sd+'deg)'});
+    };
+    </script>
+  </body>
+</html>

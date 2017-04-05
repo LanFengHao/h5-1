@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body{
+      background-color: #333;
+    }
+      .aaa{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        background-color: #fff;
+      }
+      #btn{
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aaa">
+    </div>
+    <input type="range" name="name" value="1" id="btn" min="0" max="1" step="0.1">
+    <!-- <button type="button" name="button" id="btn">随机色</button> -->
+    <script src="./jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        cao();
+
+      function cao() {
+        var a= Math.floor(Math.random()*256 + 0);
+        var b = Math.floor(Math.random()*256 + 0);
+        var c = Math.floor(Math.random()*256 + 0);
+        var d = $("#btn").val();
+          $(".aaa").css({"backgroundColor":"rgba("+a+","+b+","+c+","+d+")"});
+          setTimeout(cao,1000)
+      }
+
+    </script>
+  </body>
+</html>

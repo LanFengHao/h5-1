@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag 拖拽</title>
+	<style type="text/css">
+
+	.f {
+		width: 500px;
+		height: 500px;
+		border: 1px solid red;
+	}
+
+	</style>
+</head>
+<body>
+
+<a id="a" href="https://www.baidu.com">百度</a>
+
+<img id="img" draggable="true" src="./image/zhaosi.jpg">
+<!--  draggable 是否可拖动   -->
+<div id="box" class="f"></div>
+
+<script type="text/javascript">
+
+    var a = document.querySelector("#a");
+    a.onclick = function(event){
+    	//preventDefault() 阻止一个事件的默认行为
+    	event.preventDefault();
+    }
+
+
+
+
+	var box = document.querySelector("#box");
+	var img = document.querySelector("#img");
+// addEventListener 方法用于向指定元素添加事件句柄
+//
+// 在拖动目标上触发事件 (源元素):
+// ondragstart - 用户开始拖动元素时触发
+// ondrag - 元素正在拖动时触发
+// ondragend - 用户完成元素拖动后触发
+//
+// 释放目标时触发的事件:
+//
+// ondragenter - 当被鼠标拖动的对象进入其容器范围内时触发此事件
+// ondragover - 当某被拖动的对象在另一对象容器范围内拖动时触发此事件
+// ondragleave - 当被鼠标拖动的对象离开其容器范围内时触发此事件
+// ondrop - 在一个拖动过程中，释放鼠标键时触发此事件
+	// img.addEventListener("dragstart", function(){
+	// 	console.log("dragstart ...");
+	// }, false);
+	//
+	// img.addEventListener("drag", function(){
+	// 	console.log("drag ...");
+	// }, false);
+	//
+	// img.addEventListener("dragend", function(){
+	// 	console.log("dragend...");
+	// }, false);
+	//
+	// box.addEventListener("dragenter", function(){
+	// 	this.style.borderColor = "blue";
+	// }, false);
+	//
+	// box.addEventListener("dragleave", function(){
+	// 	this.style.borderColor = "yellow";
+	// }, false);
+	//
+
+
+    //要让一个元素完成拖拽，那么必须在dragover事件中阻止其默认行为
+	box.addEventListener("dragover", function(event){
+		// console.log("dragover ...");
+		event.preventDefault();
+	}, false);
+
+	box.addEventListener("drop", function(){
+		console.log("drop ...");
+
+        //完成拖拽
+				//appendChild() 方法向节点添加最后一个子节点。
+		box.appendChild(img);
+	}, false);
+
+</script>
+
+</body>
+</html>

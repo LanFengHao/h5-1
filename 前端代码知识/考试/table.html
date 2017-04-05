@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <style>
+      .biao{
+        margin: auto;
+        border-collapse:collapse;
+        border-color: #aaa;
+        text-align: center;
+        font-size: 14px;
+
+
+
+      }
+      .tou{
+
+      }
+    </style>
+  </head>
+  <body>
+    <table class="biao" width="385px" height="310px" border="1px"  cellpadding="5";>
+      <tr class="tou1">
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+      </tr>
+      <tr class="tou2">
+
+        <td>张三</td>
+        <td>男</td>
+        <td>20</td>
+      </tr>
+      <tr class="tou3">
+
+        <td>张三</td>
+        <td>男</td>
+        <td>20</td>
+      </tr>
+      <tr class="tou4">
+
+        <td>张三</td>
+        <td>男</td>
+        <td>20</td>
+      </tr>
+      <tr class="tou5">
+          <td>张三</td>
+          <td>男</td>
+          <td>20</td>
+      </tr>
+    </table>
+
+    <script src="./jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".biao").mouseover(function() {
+          $(".biao").css({"box-shadow":"0px 1px 5px 2px #af5"})
+        }).mouseout(function() {
+          $(".biao").css({"box-shadow":"none"})
+        });
+
+        $(".tou1").mouseover(function() {
+          $(".tou1 th").css({"backgroundColor":"#ff0"})
+        }).mouseout(function() {
+          $(".tou1 th").css({"backgroundColor":"#fff"})
+        });
+        $(".tou2").mouseover(function() {
+          $(".tou2 td").css({"backgroundColor":"#ff0"})
+        }).mouseout(function() {
+          $(".tou2 td").css({"backgroundColor":"#fff"})
+        });
+        $(".tou3").mouseover(function() {
+          $(".tou3 td").css({"backgroundColor":"#ff0"})
+        }).mouseout(function() {
+          $(".tou3 td").css({"backgroundColor":"#fff"})
+        });
+        $(".tou4").mouseover(function() {
+          $(".tou4 td").css({"backgroundColor":"#ff0"})
+        }).mouseout(function() {
+          $(".tou4 td").css({"backgroundColor":"#fff"})
+        });
+        $(".tou5").mouseover(function() {
+          $(".tou5 td").css({"backgroundColor":"#ff0"})
+        }).mouseout(function() {
+          $(".tou5 td").css({"backgroundColor":"#fff"})
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+      });
+    </script>
+  </body>
+</html>

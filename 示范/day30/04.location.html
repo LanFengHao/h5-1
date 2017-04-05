@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+</head>
+
+<body>
+    <button id="btn">点击跳转</button>
+    <script type="text/javascript">
+    console.log(window.location);
+
+    console.log(location.hash);
+    console.log(location.href);
+    console.log(location.search);
+    console.log(location.host);
+    console.log(location.hostname);
+    console.log(location.protocol);
+    console.log(location.port);
+
+
+    var btn = document.querySelector("#btn");
+
+
+    // assign()	加载新的文档。
+    // reload()	重新加载当前文档。
+    // replace()	用新的文档替换当前文档。
+
+
+    btn.onclick = function() {
+        // location.assign("https://www.baidu.com");
+        // location = "https://www.baidu.com";
+        // location.href = "https://www.baidu.com";
+
+        //没有后退
+        // location.replace("https://www.baidu.com");
+        // location.reload();
+
+
+
+        	location.search = "?name=lisi&age=10";
+        // 	location.hash = "#123";
+        // 	location.port = 80 ;
+
+
+        // location.href = "./test.html#1";
+
+    }
+
+// 属性	描述
+// hash	设置或返回从井号 (#) 开始的 URL（锚）。
+// host	设置或返回主机名和当前 URL 的端口号。
+// hostname	设置或返回当前 URL 的主机名。
+// href	设置或返回完整的 URL。
+// pathname	设置或返回当前 URL 的路径部分。
+// port	设置或返回当前 URL 的端口号。
+// protocol	设置或返回当前 URL 的协议。
+// search	设置或返回从问号 (?) 开始的 URL（查询部分）。
+
+    </script>
+</body>
+
+</html>

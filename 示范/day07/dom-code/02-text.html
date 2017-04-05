@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+
+    <div>这是div<p>这是p<span>这是span</span></p></div>
+
+    <div class="f">
+      <ul>
+        <li>11111</li>
+        <li>11111</li>
+        <li>11111</li>
+        <li>11111</li>
+      </ul>
+    </div>
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+          //输出div中的文本值
+          console.log($("div").text());
+          $("div.f").text("<p>p元素！！！！！！</p>");
+        });
+    </script>
+</body>
+
+</html>

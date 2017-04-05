@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>json</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var obj = {
+        'name':'lisi',
+        'age': 10,
+        'hobby':['read','write','sport'],
+        'mesg':{
+          'sheng':'beijing',
+          'shi':'beijing',
+          'qu':'海淀区'
+        }
+      };
+        // console.log(obj.hobby);
+        // console.log(obj.mesg);
+        // console.log(obj);
+  /*****************************************************/
+        var stus = [{
+            "name": "lisi",
+            "age": 10
+        }, {
+          "name": "zang",
+          "age": 20
+        }, {
+          "name": "zhao",
+          "age": 30
+        }];
+
+        for (var i = 0; i < stus.length; i++){
+          // console.log("名字=" + stus[i].name  +"\n年龄=" +  stus[i].age );
+          var a
+          a = "名字=" + stus[i].name  +"年龄=" +  stus[i].age
+        }
+  /*****************************************************/
+  var jsonStr = JSON.stringify(obj);  //json的序列化
+  console.log(jsonStr);//字符串
+  var newJson = JSON.parse(jsonStr);//json的解析
+  console.log(newJson);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************/
+    </script>
+  </body>
+</html>

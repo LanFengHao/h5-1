@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div">测试nodeName</div>
+    <script>
+    var str = "hello world";
+    var newStr = str.slice(0);
+    // console.log(newStr);
+    newStr[0] = 'H';//字符串是不可变的。
+   //str.slice(begin[,end])，对字符串进行切片操作，返回新的字符串。从begin开始，但是不包括end。　　　　　
+    newStr = "hehe";
+
+    console.log("str =", str);
+    console.log("newStr =", newStr);
+
+
+
+
+    str = "abcdefghij";
+    console.log(str.substr(-20, 3)); //越界时，最后从边界开始
+    console.log(str.substr(0, 30)); //越界时，最后从边界计算
+    //str.substr(start[, length]), 返回从start开始的长度为length的字符串。
+
+    var div = document.getElementById("div");
+    console.log(div.nodeName.toLowerCase()); // DIV   nodeName获得元素的节点名称,默认获得为大写
+    //toLowerCase()  小写, toUpperCase() 大写   大小写进行转换。
+
+
+
+    var s = "hello world google";//str.split([separator] [,limit]),对字符串进行分割。
+    var a = s.split(" ");
+    console.log(a);
+
+    s = "hello,world,name,age";
+    a = s.split(",", 3);//最多包含3个片段   ////按照空格分割，限制个数3
+    console.log(a);
+
+    </script>
+</body>
+
+</html>

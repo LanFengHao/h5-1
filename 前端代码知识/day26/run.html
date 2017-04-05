@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .box{
+        width: 1226px;
+        height: 460px;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+      }
+      .max-box{
+        display: flex;
+        position: absolute;
+      }
+      .index ul{
+        list-style-type: none;
+        position: absolute;
+        bottom: 10px;
+        right: 5%;
+      }
+      .index ul li{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+<div class="box">
+  <div class="max-box">
+    <img src="./xmad_14889653089832_lSZoz.jpg" alt="">
+    <img src="./xmad_14901763921008_mXDyA.jpg" alt="">
+    <img src="xmad_14901918267935_MsnvK.jpg" alt="">
+  </div>
+  <div class="index">
+    <ul>
+
+    </ul>
+  </div>
+</div>
+
+
+<script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+<script src="./move.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(function() {
+  var inx = $(".max-box img:last").index(".max-box img");
+  // console.log(inx);
+  for (var i = 0; i <=inx; i++) {
+    $(".index>ul").append("<li></li>");
+    $(".index>ul li:eq("+i+")").mousemove(function(){
+      $(this).css({"background":"#b00"});
+      $(this).siblings().css({"background":"#fff"});
+      
+    })
+  }
+})
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #f{
+        width: 100%;
+        height: 200px;
+        background-color: #aaa;
+      }
+      body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="f">
+      <h1>拖拽文件处</h1>
+    </div>
+    <script type="text/javascript">
+      var f =document.getElementById("f");
+      f.addEventListener("dragover",function(event) {
+        console.log("dragover....");
+      })
+    </script>
+  </body>
+</html>

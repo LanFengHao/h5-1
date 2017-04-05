@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件</title>
+</head>
+<body>
+
+<input id="files" type="file"  multiple>
+
+<script type="text/javascript">
+	var f = document.querySelector("#files");
+//onchange当用户改变input内容时执行一段Javascript代码：
+	f.onchange = function(event){
+		for (var i = 0; i < f.files.length; i++){
+			console.log(f.files[i].name  +  "     " + parseInt(f.files[i].size/1024) + "KB");
+		}
+
+		var file = f.files[0];
+//FileReader 对象允许Web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，
+//使用 File 或 Blob 对象指定要读取的文件或数据。
+//返回一个新构造的FileReader。
+		var reader = new FileReader();
+//当浏览器开始寻找指定的文件时，会发生 loadstart 事件。即当加载过程开始时。
+		reader.addEventListener("loadstart", function(){
+			console.log("start ....");
+		});
+//当浏览器正在下载指定的文件时，会发生 progress 事件。
+		reader.addEventListener("progress", function(){
+			console.log("progress ....");
+		});
+
+		reader.addEventListener("load", function(){
+			console.log('lllll');
+			//只有读取完毕之后，才可以访问result
+			console.log(reader.result);
+
+	/*		var img = new Image();
+			img.onload = function(){
+				document.body.appendChild(img);
+			}
+			img.src = reader.result;*/
+
+		}, false);
+
+
+        //按照文本方式读取文件内容
+		// reader.readAsText(file);
+
+        //按照url读取，用于读取图片
+		reader.readAsDataURL(file);
+
+        //按照二进制字符串读取
+		// reader.readAsBinaryString(file);
+
+	}
+
+
+
+
+</script>
+
+</body>
+</html>

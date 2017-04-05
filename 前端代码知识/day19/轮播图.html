@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .banner{
+      width: 790px;
+      height: 100%;
+      /*background-color: #00ff00;*/
+      float: left;
+      margin-left: 10px;
+    }
+    .banner-max-box{
+      height: 340px;
+      width: 790px;
+      position: relative;
+    }
+    .banner-max1{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b1.jpg);
+      position: absolute;
+      z-index:8;
+    }
+    .banner-max2{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b2.jpg);
+      position: absolute;
+      z-index:7;
+      display: none;
+
+    }
+    .banner-max3{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b3.jpg);
+      position: absolute;
+      z-index:6;
+      display: none;
+    }
+    .banner-max4{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b4.png);
+      position: absolute;
+      z-index:5;
+      display: none;
+    }
+    .banner-max5{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b5.png);
+      position: absolute;
+      z-index:4;
+      display: none;
+    }
+    .banner-max6{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b1.jpg);
+      position: absolute;
+      z-index:3;
+      display: none;
+    }
+    .banner-max7{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b2.jpg);
+      position: absolute;
+      z-index:2;
+      display: none;
+    }
+    .banner-max8{
+      display: block;
+      height: 340px;
+      width: 790px;
+      background-image: url(./img/b3.jpg);
+      position: absolute;
+      z-index:1;
+      display: none;
+    }
+    .lb{
+      width: 40px;
+      height: 80px;
+      background-color: rgba(100,100,100,.5);
+      z-index: 100;
+    }
+    .tda{
+      position: absolute;
+      top: 130px;
+      left: 0px;
+    }
+    .tdb{
+      position: absolute;
+      top: 130px;
+      right: 0px;
+    }
+    .dianji{
+      position: absolute;
+      z-index: 200;
+      left: 38.5%;
+      bottom: 20px;
+      font-size: 0;
+      padding: 4px 8px;
+      border-radius: 12px;
+      background-color: hsla(0,0%,100%,.3);
+    }
+    .cik{
+      list-style-type: none;
+    }
+    .cik>li{
+      position: relative;
+      z-index: 1000000;
+      color: #000;
+      display: inline-block;
+      margin-right: 10px;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: #fff;
+    }
+    .cik .click1{
+      background-color: #f00;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-max-box">
+      <a href="#" class="banner-max1"></a>
+      <a href="#" class="banner-max2"></a>
+      <a href="#" class="banner-max3"></a>
+      <a href="#" class="banner-max4"></a>
+      <a href="#" class="banner-max5"></a>
+      <a href="#" class="banner-max6"></a>
+      <a href="#" class="banner-max7"></a>
+      <a href="#" class="banner-max8"></a>
+      <div class="lb tda"></div>
+      <div class="lb tdb"></div>
+      <div class="dianji">
+        <ul class="cik">
+</a>
+        </ul>
+      </div>
+      </div>
+
+
+
+
+          <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+          <script type="text/javascript">
+          $(function() {
+            var inx = $(".banner-max-box a:last").index(".banner-max-box a");
+            // console.log(inx);
+            for (var i = 0; i <=inx; i++) {
+              $(".cik").prepend("<li>"+(i+1)+"</li>");
+              // $(".cik li").html(inx)
+            }
+          })
+
+
+
+
+            $(function() {
+              var tz = 0;
+              //
+              // $(".cik li").mousemove(function() {
+              //   var inx = $(".cik li").index(this);
+              //
+              //
+              // var ina = $(".banner-max-box a:last").index(".banner-max-box a");
+              // // console.log(inx);
+              // for (var a = 0; a < ina; a++) {
+              //   $(".cik li:eq("+inx+")").mousemove(function() {
+              //   tz += 1;
+              //   var clas = ".banner-max"+tz;
+              //   // console.log(clas);
+              //   $(clas).fadeIn("slow",function() {
+              //     clas = ".banner-max"+(tz-1);
+              //   $(clas).fadeOut("slow");
+              //   $(".cik li:eq("+inx+")").css({"background":"#f00"});
+              //   $(".cik li:gt("+inx+")").css({"background":"#fff"});
+              //   $(".cik li:lt("+inx+")").css({"background":"#fff"});
+              //   $(".banner-max-box a:lt("+inx+")").fadeOut("slow");
+              //   });
+              //   });
+              // };
+              // });
+
+
+              $(".cik li:eq(0)").mousemove(function() {
+              $(".cik li:eq(0)").css({"background":"#f00"});
+              tz = 1;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow");
+              $(".cik li:gt(0)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(0)").fadeOut("slow");
+            });
+              $(".cik li:eq(1)").mousemove(function() {
+              tz = 2;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(1)").css({"background":"#f00"});
+              $(".cik li:gt(1)").css({"background":"#fff"});
+              $(".cik li:lt(1)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(1)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(2)").mousemove(function() {
+              tz = 3;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(2)").css({"background":"#f00"});
+              $(".cik li:gt(2)").css({"background":"#fff"});
+              $(".cik li:lt(2)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(2)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(3)").mousemove(function () {
+              tz = 4;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(3)").css({"background":"#f00"});
+              $(".cik li:gt(3)").css({"background":"#fff"});
+              $(".cik li:lt(3)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(3)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(4)").mousemove(function() {
+              tz = 5;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(4)").css({"background":"#f00"});
+              $(".cik li:gt(4)").css({"background":"#fff"});
+              $(".cik li:lt(4)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(4)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(5)").mousemove(function() {
+              tz = 6;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(5)").css({"background":"#f00"});
+              $(".cik li:gt(5)").css({"background":"#fff"});
+              $(".cik li:lt(5)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(5)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(6)").mousemove(function() {
+              tz = 7;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(6)").css({"background":"#f00"});
+              $(".cik li:gt(6)").css({"background":"#fff"});
+              $(".cik li:lt(6)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(6)").fadeOut("slow");
+            });
+          }),
+              $(".cik li:eq(7)").mousemove(function() {
+              tz = 8;
+              var clas = ".banner-max"+tz;
+              // console.log(clas);
+
+              $(clas).fadeIn("slow",function() {
+                clas = ".banner-max"+(tz-1);
+                // console.log("dws"+clas);
+              $(clas).fadeOut("slow");
+              $(".cik li:eq(7)").css({"background":"#f00"});
+              $(".cik li:lt(7)").css({"background":"#fff"});
+              $(".banner-max-box a:lt(7)").fadeOut("slow");
+            });
+            });
+
+                setInterval(function() {
+                  setTimeout($(".tdb").trigger("click"),1500);
+                },4000);
+
+
+                  $(".tdb").click(function () {
+                    tz += 1;
+                  if (tz<9) {
+                    var clas = ".banner-max"+tz;
+                    // console.log(clas);
+                    $(clas).css({"display":"block"});
+                    $(clas).fadeIn("slow",function() {
+                      clas = ".banner-max"+(tz-1);
+                      $(clas).fadeOut("slow");
+                      var at = tz-1;
+                      $(".cik li:lt("+at+")").css({"background":"#fff"});
+                      $(".cik li:eq("+at+")").css({"background":"#f00"});
+                    });
+                    }else{
+                      tz = 0;
+                      tz += 1;
+                      var clas = ".banner-max"+tz;
+                      // console.log(clas);
+                      $(clas).fadeIn("slow");
+                      var at = tz-1;
+                      $(".cik li:gt("+at+")").css({"background":"#fff"});
+                      $(".cik li:eq("+at+")").css({"background":"#f00"});
+                    }
+                  });
+
+                  $(".tda").click(function() {
+                    tz -= 1;
+                    if (tz>0) {
+                      var clas = ".banner-max"+tz;
+                      // console.log(clas);
+                      // $(clas).css({"display":"block"});
+                      $(clas).fadeIn("slow",function() {
+                        clas = ".banner-max"+(tz+1);
+                        $(clas).fadeOut("slow");
+                        var at = tz-1;
+                        $(".cik li:gt("+at+")").css({"background":"#fff"});
+                        $(".cik li:eq("+at+")").css({"background":"#f00"});
+                      });
+                    }else if(tz <= 0){
+                    // console.log(tz);
+                      tz = 9;
+                      tz -= 1;
+                      var clas = ".banner-max"+tz;
+                      $(clas).css({"display":"block"});
+                      $(".banner-max1").fadeOut("slow");
+                      // console.log(clas);
+                      $(clas).fadeIn("slow");
+                      var at = tz-1;
+                      $(".cik li:lt("+at+")").css({"background":"#fff"});
+                      $(".cik li:eq("+at+")").css({"background":"#f00"});
+                    };
+                  });
+                });
+          </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    </center>
+    <script type="text/javascript">
+      var can = document.getElementById('canvas');
+      var cxt = can.getContext("2d");
+      cxt.beginPath();
+      cxt.fillStyle = "red";
+      cxt.fillText("40%", 190,320);
+      cxt.moveTo(200,200);//变为扇形必须要指定圆心位置
+      cxt.arc(200,200,100, 0* Math.PI/180 , 144*Math.PI/180, false);//顺时针
+      cxt.fill();
+      cxt.beginPath();
+      cxt.fillStyle = "blue";
+      cxt.fillText("30%", 80,150);
+      cxt.moveTo(200,200);//变为扇形必须要指定圆心位置
+      cxt.arc(200,200,100, 144* Math.PI/180 , 252*Math.PI/180, false);//顺时针
+      cxt.fill();
+      cxt.beginPath();
+      cxt.fillStyle = "yellow";
+      cxt.fillText("20%", 220,90);
+      cxt.moveTo(200,200);//变为扇形必须要指定圆心位置
+      cxt.arc(200,200,100, 252* Math.PI/180 , 324*Math.PI/180, false);//顺时针
+      cxt.fill();
+      cxt.beginPath();
+      cxt.fillStyle = "pink";
+      cxt.fillText("10%", 300,170);
+      cxt.moveTo(200,200);//变为扇形必须要指定圆心位置
+      cxt.arc(200,200,100, 324* Math.PI/180 , 360*Math.PI/180, false);//顺时针
+      cxt.fill();
+
+
+
+    </script>
+  </body>
+</html>

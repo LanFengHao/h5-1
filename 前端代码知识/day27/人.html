@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+  <canvas id="canvas" width="500" height="700"></canvas>
+  <button id="b1">换个正方向继续跑</button>
+  <button id="b2">换个左侧继续跑</button>
+  <button id="b3">换个右侧继续跑</button>
+  <button id="b4">换个反方向继续跑</button>
+  </center>
+  <script type="text/javascript">
+  var can = document.querySelector("canvas");
+  var ctx = can.getContext("2d");
+  var img = new Image()
+  var b = 0;
+  var c = document.getElementById('b2');
+  c.onclick = function() {
+     b = 65;
+     return function() {
+       return b;
+     }
+  };
+
+  var c = document.getElementById('b3');
+  c.onclick = function() {
+     b = 130;
+     return function() {
+       return b;
+     }
+  };
+
+  var c = document.getElementById('b4');
+  c.onclick = function() {
+     b = 195;
+     return function() {
+       return b;
+     }
+  };
+
+  var c = document.getElementById('b1');
+  c.onclick = function() {
+     b = 0;
+     return function() {
+       return b;
+     }
+  };
+  // console.log(b);
+  img.onload = function(){
+    console.log(b);
+    // ctx.drawImage(img, 0, 0, 16*3,26*3,0,0,160*3,260*3);
+    var a = 0;
+  function dong() {
+    ctx.clearRect(0,0,500,700)
+    ctx.drawImage(img, a, b, 16*3,26*3,0,0,160*3,260*3);
+    a += 40;
+    if (a>120) {
+      a = 0;
+    }
+    // console.log(a);
+    setTimeout(dong, 100)
+  };
+    dong()
+  };
+  img.src = "./1.png";
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .kk{
+      position: absolute;
+      top:500px;
+      left: 700px;
+      border:solid 1px #333;
+      transition: all 1s ease;
+    }
+    .puk1{
+      transform: rotate(60deg);
+      transform-origin: left top;
+    }
+    .puk2{
+      transform: rotate(120deg);
+      transform-origin: left top;
+
+    }
+    .puk3{
+      transform: rotate(180deg);
+      transform-origin: left top;
+    }
+    .puk4{
+      transform: rotate(240deg);
+      transform-origin: left top;
+    }
+    .puk5{
+      transform: rotate(300deg);
+      transform-origin: left top;
+    }
+    .puk6{
+      transform: rotate(360deg);
+      transform-origin: left top;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="pu">
+      <img src="./13-image/img1/pk1.png" alt="" class=" kk">
+      <img src="./13-image/img1/pk2.png" alt="" class=" kk">
+      <img src="./13-image/img1/pk1.png" alt="" class=" kk">
+      <img src="./13-image/img1/pk2.png" alt="" class=" kk">
+      <img src="./13-image/img1/pk1.png" alt="" class=" kk">
+      <img src="./13-image/img1/pk2.png" alt="" class=" kk">
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(0)").addClass("puk1")
+        },function() {
+          $("img:eq(0)").removeClass("puk1");
+        });
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(1)").addClass("puk2")
+        },function() {
+          $("img:eq(1)").removeClass("puk2");
+        });
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(2)").addClass("puk3")
+        },function() {
+          $("img:eq(2)").removeClass("puk3");
+        });
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(3)").addClass("puk4")
+        },function() {
+          $("img:eq(3)").removeClass("puk4");
+        });
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(4)").addClass("puk5")
+        },function() {
+          $("img:eq(4)").removeClass("puk5");
+        });
+        $(".pu").hover(function hoverHandlerOne() {
+          $("img:eq(5)").addClass("puk6")
+        },function() {
+          $("img:eq(5)").removeClass("puk6");
+        });
+      })
+    </script>
+  </body>
+</html>

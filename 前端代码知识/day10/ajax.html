@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+/*      $(function () {
+        $.ajax({
+          method:"POST",
+          url:"../../示范/day10/login.php",
+          data:{name:"lisi",passwd:100},
+          success:function (data,textStatus,jqXHR) {
+            console.log(data);
+            console.log("success textStatus = ",textStatus);
+            if (data == "ok"){
+
+            }
+          },
+          error: function(jqXHR,textStatus,errorThroWn){
+            console.log(errorThroWn);
+            console.log("error textStatus = ",textStatus);
+          }
+        })
+      })
+      */
+      $(function () {
+        $.ajax({
+          method:"GET",
+          url:"../../示范/day10/login.php",
+          data:{name:"asda",passwd:"123"},
+          success:function (data,textStatus,jqXHR) {
+            console.log(data);
+            console.log("success textStatus = ",textStatus);
+            if (data == "OK") {
+
+            }
+          },
+          error:function (jqXHR,textStatus,errorThroWn){
+            console.log(errorThroWn);
+            console.log("error textStatus = ",textStatus);
+          },
+        // },
+        // error:function(jqXHR,textStatus,errorThroWn) {
+        //   console.log(errorThroWn);
+        //   console.log("error textStatus = ",textStatus);
+        // }
+      });
+    </script>
+  </body>
+</html>

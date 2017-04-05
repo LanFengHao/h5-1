@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>video</title>
+	<style media="screen">
+	*{
+		margin: 0;
+	}
+	#bo1{
+		display: none;
+	}
+.div{
+	display: flex;
+	float: left;
+}
+	</style>
+</head>
+<body>
+
+<video controls loop  played id="video">
+	<source src="video/fun.mp4" type="">
+	<source src="video/chrome.ogv" type="">
+</video>
+<br>
+<div class=".div">
+<button type="button" name="button" id="bo">播放</button>
+<button type="button" name="button" id="bo1">暂停</button>
+<input type="range" value="0" step="0.1" min="0" max="100" id="boj" style="width: 450px">
+
+<button type="button" name="button" id="bo2">静音</button>
+<input type="range" value="1"  step="0.1" min="0" max="1" id="boo">
+<!-- <button type="button" name="button" id="bo3">进度</button> -->
+</div>
+<script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+var bo = document.getElementById("bo");
+var bo1 = document.getElementById("bo1");
+var bo2 = document.getElementById("bo2");
+var boo = document.getElementById("boo");
+var boj = document.getElementById("boj");
+
+// var bo3 = document.getElementById("bo3");
+var source = document.getElementById("video")
+	window.onload = function(){
+
+		function fullScreen(elem) {
+				if (elem.requestFullScreen) {
+					//requestFullScreen请求全屏
+						console.log("11");
+						elem.requestFullScreen();
+				} else if (elem.mozRequestFullScreen) {
+						console.log("22");
+						elem.mozRequestFullScreen();//火狐请求全屏
+				} else if (elem.webkitRequestFullScreen) {
+						console.log("33");
+						elem.webkitRequestFullScreen();//谷歌请求全屏
+
+				}
+		}
+
+
+		function cancelScreen(elem) {
+				if (document.cancelFullScreen) {
+						document.cancelFullScreen();
+				} else if (document.mozCancelFullScreen) {
+						document.mozCancelFullScreen();
+				} else if (document.webkitCancelFullScreen) {
+						document.webkitCancelFullScreen();
+
+				}
+		}
+
+source.ondblclick=function() {
+	if (document.fullscreenElement || document.mozFullscreenElement ||
+			document.webkitFullscreenElement) {
+			//取消全屏
+			cancelScreen(source);
+
+	} else {
+			fullScreen(source);
+	}
+}
+
+
+
+
+
+$(document).keydown(function(event){
+	console.log(event.keyCode);
+	if (event.keyCode==32) {
+		// console.log('3333222');
+		(function (){
+			console.log('a');
+try {
+	if (source.paused==false) {
+		// console.log('pause');
+			source.pause();
+			$(bo1).css({"display":"none"});
+			$(bo).css({"display":"inline-block"});
+	}else {
+		// console.log('play');
+			source.play();
+			$(bo).css({"display":"none"});
+			$(bo1).css({"display":"inline-block"});
+	}
+} catch (e) {
+	console.log(e);
+} finally {
+}
+		})();
+	}
+});
+
+
+
+
+
+		bo.onclick=function() {
+			source.play();
+			$(bo).css({"display":"none"});
+			$(bo1).css({"display":"inline-block"});
+		}
+		bo1.onclick=function() {
+			source.pause();
+			$(bo1).css({"display":"none"});
+			$(bo).css({"display":"inline-block"});
+		}
+		bo2.onclick=function(){
+			source.muted= !source.muted;
+			// boo.value = 0;
+			// console.log(jy);
+		}
+	// 	bo3.onclick=function(){
+	// 		console.log(source.played.length);
+	// 	}
+
+	boo.onchange=function() {
+		source.volume = boo.value
+		source.muted = false;
+		}
+	}
+
+
+</script>
+
+</body>
+</html>

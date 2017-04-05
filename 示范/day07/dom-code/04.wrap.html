@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>元素的包裹</title>
+  </head>
+  <body>
+
+    <div class="one">
+      <li>11111</li>
+      <li>11111</li>
+      <li>11111</li>
+    </div>
+
+    <div class="two">
+      <ul><li>2222</li></ul>
+      <ul><li>2222</li></ul>
+      <ul><li>2222</li></ul>
+      <ul><li>2222</li></ul>
+    </div>
+
+
+    <script src="./js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          // $(".one li").wrap("<ul></ul>");//将所有匹配元素都单独包裹,在集合中匹配的每个元素周围包裹一个HTML结构。
+          $(".one li").wrapAll("<ul></ul>");//在集合中所有匹配元素的外面包裹一个HTML结构。
+          $(".two ul li").unwrap();//将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置。
+        });
+    </script>
+
+  </body>
+</html>

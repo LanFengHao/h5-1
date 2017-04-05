@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="jddr.css" type="text/css">
+
+    <title>京东-欢迎登录</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="w top">
+      <div class="logo">
+        <a href="#"></a>
+        <div class="b">
+          欢迎登录
+        </div>
+      </div>
+      <a href="#" class="q-link"><div class="xt"></div>登录页面，调查问卷</a>
+    </div>
+    <div class="body">
+      <div class="w center">
+        <div class="banner-bg">
+          <div class="form">
+            <div class="sm">
+              扫码登录
+            </div>
+            <div class="zhanghu">
+              账户登录
+            </div>
+            <div class="mv">
+              <div class="form-sl">
+                <div class="yonghu">
+                  <div class="tt1"></div>
+                  <input type="text" name="name" value="" class="text">
+                </div>
+                <div class="mima">
+                  <div class="tt2"></div>
+                  <input type="password" name="name" value="" class="password">
+                </div>
+                <div class="safe">
+                  <input type="checkbox" name="name" value="">
+                  <samp>记住密码</samp>
+                  <a href="#">忘记密码</a>
+                </div>
+                <a class="dr">
+                  <samp>登录</samp>
+                </a>
+              </div>
+            </div>
+            <div class="form-bottom">
+              <div class="qita">
+              <a href="#" class="QQ-z"> <p>
+                QQ
+              </p>
+              <div class="QQ"></div>
+              </a>
+              <p class="QW">
+                |
+              </p>
+              <a href="#" class="wei-z"> <p>
+                微信
+              </p>
+              <div class="wei"></div>
+              </a>
+            </div>
+            <div class="tt">
+
+            </div>
+              <a href="#" class="liji">立即注册</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="di w">
+      <ul class="daohan">
+        <li><a href="#">关于我们</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">联系我们</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">人才招聘</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">商家入驻</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">广告服务</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">手机京东</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">友情链接</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">销售联盟</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">京东社区</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">京东公益</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="#">English Site</a></li>
+      </ul>
+      <p class="bqsy">
+        Copyright © 2004-2017  京东JD.com 版权所有
+      </p>
+    </div>
+
+    <script src="./jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $ (document).ready(function() {
+      $(".text").focus(function() {
+        $(".tt1").css({"background-position":"0px -47px"})
+      }).blur(function() {
+        $(".tt1").css({"background-position":"1px 1px"})
+      });
+      $(".password").focus(function() {
+        $(".tt2").css({"background-position":"-48px -47px"})
+      }).blur(function() {
+        $(".tt2").css({"background-position":"-47px 1px"})
+      });
+
+      $(".dr").click(function() {
+        var t = $(".text").val();
+        var m = $(".password").val();
+        var g = t+m;
+        if (g=="") {
+          alert("请输入账户名和密码")}
+        else if(t=="") {
+          alert("请输入账户名")}
+        else if(m=="") {
+          alert("请输入密码")}
+        else {
+          // alert("您以成功登录")
+          // $.post(".ajax.json",{text:t,password:m},function() {
+          //   alert("您以成功登录")
+          var name = $(".text").val()
+          var passwd = $(".password").val()
+          $.ajax({
+            method:"POST",
+            url:"../longin.php",
+            data:{name:name,passwd:passwd},
+            }).done(function(data, textStatus, jqXHR){
+              // console.log(jqXHR.status);
+              // console.log(data);
+              alert("OK")
+
+            }).fail(function(jqXHR, textStatus, errorThrown){
+              // console.log(jqXHR.status);
+              // console.log(errorThrown);
+              alert("账号或密码错误");
+            });
+          };
+        });
+      });
+
+      // $(".text").focus(function() {
+      //   var str = $(".text").val();
+      //   if(str=="邮箱/用户名/已验证手机"){
+      //   $(".text").val(null);
+      //   }).blur(function() {
+      //     var str = $(".text").val();
+      //     if(str==""){
+      //     $(".text").val("邮箱/用户名/已验证手机");
+      //     }
+      //   })
+
+
+    </script>
+  </body>
+</html>

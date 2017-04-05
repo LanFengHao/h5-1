@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery 3D旋转木马轮播图插件代码</title>
+<link type="text/css" rel="stylesheet" href="carousel.css">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- <script src="../jquery-3.1.1.min.js" charset="utf-8"></script> -->
+<script type="text/javascript" src="carousel.js"></script>
+<style>
+body { background-color:#222; color:#fff;font-family:"microsoft yahei";}
+.container { margin:0px auto; max-width:1000px;}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="pictureSlider poster-main" data-setting='{"width":900,"height":270,"posterWidth":640,"posterHeight":270,"scale":0.8,"autoPlay":true,"delay":2000,"speed":300}'>
+	<div class="poster-btn poster-prev-btn"></div>
+    <ul class="poster-list">
+    	<li class="poster-item"><a href="#"><img src="./img/1.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/2.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/3.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/4.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/5.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/6.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/7.jpeg" width="100%" height="100%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/8.jpeg" width="50%" height="50%"></a></li>
+        <li class="poster-item"><a href="#"><img src="./img/9.jpeg" width="100%" height="100%"></a></li>
+    </ul>
+    <div class="poster-btn poster-next-btn"></div>
+</div>
+</div>
+<script>
+$(function(){
+	Carousel.init($(".pictureSlider"));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>video</title>
+</head>
+<body>
+
+<video controls >
+	<source src="video/fun.mp4" type="">
+	<source src="video/chrome.ogv" type="">
+</video>
+
+<input type="range" id="volume" value="0.5" step="0.1" min="0" max="1">
+
+<progress id='progress' value="80" min="0" max="100"></progress>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+
+		var volume = document.getElementById("volume");
+
+		volume.onchange = function(){
+			console.log(volume.value);
+		}
+	}
+
+</script>
+
+</body>
+</html>

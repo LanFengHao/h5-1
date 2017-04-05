@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+输入数据： <input class="age" type="text" name="age">
+<button id="btn">点击使用Number转换成数值</button>
+<button id="btn1">点击使用parseInt转换成数值</button>
+<button id="btn2">点击使用parseFloat转换成数值</button>
+
+<script type="text/javascript">
+	
+/*	var a = 10;
+	console.log(a.toString());
+	console.log(a + "");
+
+	console.log(Boolean(a));
+	if (a){
+		console.log("----");
+	}
+*/
+
+	var age = document.querySelector(".age");
+	var btn = document.querySelector("#btn");
+
+	btn.onclick = function(event){
+	/*数值转换*/
+		console.log(Number(age.value));
+	};
+
+	btn1.onclick = function(event){
+		/*数值转换*/
+		console.log("10进制",parseInt(age.value));
+		console.log("8进制",parseInt(age.value, 8));
+		console.log("2进制",parseInt(age.value, 2));
+		console.log("16进制",parseInt(age.value, 16));
+	};
+
+	btn2.onclick = function(event){
+		console.log("小数",parseFloat(age.value));
+	};
+
+
+	console.log(Number(false));
+
+</script>
+	
+</body>
+</html>

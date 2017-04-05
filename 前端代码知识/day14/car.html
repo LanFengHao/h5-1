@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .box{
+        margin:300px auto;
+      }
+      .car{
+        width: 200px;
+        height: 84px;
+        background-image: url(./14-image/car.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: cars 2s infinite ease-in;
+      }
+      .car:hover {
+        animation-play-state: paused; /*暂停动画*/
+      }
+
+      @keyframes cars {
+        5%{
+          transform:translate(50px,0px) rotate(-30deg) skew(30deg);
+        }
+        50%{
+          transform:translate(550px,0px) rotate(0deg) skew(30deg);
+
+        }
+        100%{
+          transform:translate(950px,0px) rotate(15deg) skew(-30deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="car"></div>
+    </div>
+  </body>
+</html>

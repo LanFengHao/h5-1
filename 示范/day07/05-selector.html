@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery选择器</title>
+  </head>
+  <body>
+
+    <div>老大大</div>
+    <div id="divId" class="f">
+      老大
+    </div>
+    <div name="yangtwo">老二</div>
+    <div name="yangsan">老三</div>
+    <div name="yangsi">老四</div>
+    <p>别人家的老五</p>
+    <div name="yang">老五</div>
+
+
+
+    <script src="./selector-code/js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+     // :first 伪类选择器冒号前边不要加空格
+      console.log($(".f ~ div:first"));//选择网页中class为f的div的兄弟元素的第一个元素-->老二
+      console.log($(".f ~ div:last"));//选择网页中class为f的div的兄弟元素的最后一个元素-->老五
+      console.log($(".f ~ div:eq(1)"));//选中第（？）个元素，从0开始计数
+      console.log($(".f ~ div:even"));//选中编号偶数，从0开始计数
+
+
+      //属性选择器 "[属性名称='属性值' ]", 注意引号的的使用
+      // console.log($("[name='laowu']"));
+
+      console.log($("[name*='yang']"));//查找所有的 name 属性中带有 'yang' 的元素
+      console.log($("[name$='si']"));//查找所有的属性名称以“si”的结束
+
+    </script>
+  </body>
+</html>

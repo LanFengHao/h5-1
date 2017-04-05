@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="./jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var a = "              asdfsr rfg wre wer re aaa     丰        ";
+        for (var i = 0; i < a.length; i++) {
+          // console.log(a.charCodeAt(i));
+          var s = a.charCodeAt(i);
+          if (s==32) {
+            var b = a.substr(i+1);
+            // console.log(b);
+          }else{
+            break;
+          }
+        };
+        // console.log(b.length);
+        for (var i = b.length; i > 0; i--) {
+          var s = b.charCodeAt(i-1);
+          // console.log(s);
+          if (s==32) {
+            var c = b.substr(0,i-1);
+            // console.log(c);
+          }else{
+            break;
+          }
+        };
+        console.log(c);
+
+    </script>
+  </body>
+</html>

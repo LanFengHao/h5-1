@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3D-BOX</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      /*background-color: #0ff;*/
+    }
+      .max{
+        margin:200px auto;
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+        perspective: 2000px;
+        transition: all 5s ease;
+        color: #fff;
+        font-size: 100px;
+        transform:rotate3d(15,15,0,-25deg);
+
+      }
+      .bottom{
+        transform-origin: center center;
+        width: 200px;
+        height: 200px;
+        transform:rotate3d(90,0,0,88deg) translate3d(0px,0px,-1px);
+        background-color: rgba(100, 50, 100,.3);
+      }
+      .top{
+        width: 200px;
+        height: 200px;
+        transform-origin: center center;
+        transform:rotate3d(45,0,0,88deg);
+        background-color: rgba(0, 50, 150,.3);
+      }
+      .hou{
+        width: 200px;
+        height: 200px;
+        transform-origin: center center ;
+        transform:rotate3d(0,0,0,0deg)  translate3d(0px,-302px,-100px);
+        background-color: rgba(200, 100, 150,.3);
+      }
+      .qian{
+        width: 200px;
+        height: 200px;
+        transform-origin: center center ;
+        transform:rotate3d(0,0,0,0deg)  translate3d(0px,-496px,99px);
+        background-color: rgba(200, 0, 150,.3);
+      }
+      .left{
+        width: 200px;
+        height: 200px;
+        transform-origin:left;
+        transform:rotate3d(0,1,0,92deg)  translate3d(-99px,-697px,2px) rotate(-1.2deg);;
+        background-color: rgba(50, 200, 150,.3);
+        display: inline-block;
+      }
+      .right{
+        width: 200px;
+        height: 200px;
+        transform-origin:left;
+        transform:rotate3d(0,1,0,89.5deg)  translate3d(-99px,-897px,201px) rotate(-2deg);;
+        background-color: rgba(50,0, 150,.3);
+        display: inline-block;
+      }
+      .max:hover{
+        transform:rotate3d(15,15,0,-360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max">
+      <div class="bottom">底</div>
+      <div class="top">头</div>
+      <div class="hou">后</div>
+      <div class="qian">前</div>
+      <div class="left">左</div>
+      <div class="right">右</div>
+    </div>
+  </body>
+</html>

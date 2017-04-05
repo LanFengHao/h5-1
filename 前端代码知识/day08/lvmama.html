@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>驴妈妈注册</title>
+    <link rel="stylesheet" href="./mama.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+  <div class="w">
+    <div class="top">
+        <a href="http://www.lvmama.com/" class="top-logo">  </a>
+        <a class="mfzc">
+          免费注册
+        </a>
+        <div class="dianhua">
+          1010-6060
+        </div>
+    </div>
+  <div class="body">
+    <div class="body-left">
+      <form class="biaodan" action="##" method="get">
+        <ul>
+          <li><p>*<a>您的手机号</a></p><input type="text" name="1" id="a1"></li>
+          <li><p>*<a>图形验证码</a></p><input type="text" name="2" id="a2" value="请填写计算结果或验证码"><a href="#" class="yz gt"></a></li>
+          <li><p>*<a>手机验证码</a></p><input type="text" id="a3" name="3"><a href="#" class="dx gt"><span>获取验证码</span></i></a></li>
+          <li><p>*<a>设置密码</a></p><input type="password" name="4" id="a4"></li>
+          <li><p>*<a>确认密码</a></p><input type="password" name="5" id="a5"></li>
+          <li><input type="checkbox" name="name"  class="box"><div class="js">我已阅读并接受 <a href="#" id="sc">《驴妈妈旅游网会员服务条款》</a></div></li>
+          <input type="submit" id="zuce" value="同意服务条款并注册">
+        </ul>
+
+      </form>
+      <div >
+        <ul class="tishi">
+          <li id="aa">请填写您真实的手机号码，作为驴妈妈的登录账号</li>
+          <li id="ba">请输入验证码</li>
+          <li id="ca">请输入短信校验码</li>
+          <li id="da">密码必须为8~16位数字和字符组成</li>
+          <li id="ea">请再次输入密码</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $(".biaodan ul [name=2]").css({
+      "width":"128px"
+    });
+    $(".biaodan ul [name=3]").css({
+      "width":"128px"
+    });
+    $(".biaodan ul input:lt(5)").css({
+      "box-shadow":" 0 0 4px #CECECE inset"
+    });
+    $(".biaodan ul input:eq(5)").css({
+      // "width": "15px",
+      "height": "15px"
+    });
+    $(".biaodan ul li:eq(5)").css({
+      "width":"500px"
+    });
+    $(".biaodan ul input:eq(1)").css({
+      "color":"#ddd",
+      "font-size":"12px"
+    });
+    $("#a1").focus(function() {
+      $("#aa").css({"visibility":"visible"})
+    }).blur(function() {
+      $("#aa").css({"visibility":"hidden"})
+    });
+    $("#a2").focus(function() {
+      $("#ba").css({"visibility":"visible"})
+    }).blur(function() {
+      $("#ba").css({"visibility":"hidden"})
+    });
+    $("#a3").focus(function() {
+      $("#ca").css({"visibility":"visible"})
+    }).blur(function() {
+      $("#ca").css({"visibility":"hidden"})
+    });
+    $("#a4").focus(function() {
+      $("#da").css({"visibility":"visible"})
+    }).blur(function() {
+      $("#da").css({"visibility":"hidden"})
+    });
+    $("#a5").focus(function() {
+      $("#ea").css({"visibility":"visible"})
+    }).blur(function() {
+      $("#ea").css({"visibility":"hidden"})
+    });
+
+
+  });
+  </script>
+  </body>
+</html>

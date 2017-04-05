@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>函数绑定</title>
+  </head>
+  <body>
+    <button id="btn">点击</button>
+    <script type="text/javascript">
+    var btn = document.getElementById("btn");
+    btn.data = 10;
+    var data = 20;
+
+    function handler() {
+        console.log(this.data);
+    }
+
+  btn.addEventListener("click",function() {
+    console.log(this);
+    handler();
+  },false);
+    </script>
+  </body>
+</html>

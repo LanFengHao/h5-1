@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: #f17f60;
+      }
+      .box-dong{
+        width: 1230px;
+        height: 540px;
+        margin: 200px auto;
+      }
+      .yi{
+        background-color: #d5735a;
+        width: 200px;
+        height: 460px;
+        border-radius: 30px;
+        box-shadow: 0px 5px 3px 0px rgba(50, 50, 50, 0.5) inset;
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+      .yuan{
+        width: 100px;
+        height: 100px;
+        border: solid 50px #ad5845;
+        border-radius: 200px;
+        position: absolute;
+        top: 350px;
+        background-color:#f17f60;
+      }
+      .tie{
+        height: 125px;
+        width: 200px;
+        border-radius: 20px;
+        box-shadow: 0px -5px 3px 0px rgba(50, 50, 50, 0.9);
+        position: absolute;
+        top: 150px;
+        background-color: #7f8081;
+      }
+      .gun{
+        height: 300px;
+        width: 40px;
+        position: absolute;
+        top: 200px;
+        left: 80px;
+        background-color: #7f8081;
+        animation: gun1 1s infinite linear;
+      }
+      .quan{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        position: absolute;
+        background-color: #fff;
+        bottom: -20px;
+      }
+      .huad{
+        position: absolute;
+        animation: huad1 1s infinite linear;
+      }
+      .huad2{
+        position: absolute;
+        animation: huad2 1s infinite linear;
+      }
+      @keyframes huad1 {
+        0%{
+          transform: translate(0px,0px);
+        }
+        50%{
+          transform: translate(0px,-100px);
+        }
+        100%{
+          transform: translate(0px,0px);
+        }
+      }
+
+      @keyframes huad2 {
+        0%{
+          transform: translate(0px,-100px);
+        }
+        50%{
+          transform: translate(0px,0px);
+        }
+        100%{
+          transform: translate(0px,-100px);
+        }
+      }
+
+        @keyframes gun1 {
+          0%{
+            transform: rotate(0deg);
+            transform-origin: top;
+          }
+          25%{
+            transform: rotate(10deg);
+            transform-origin: top;
+          }
+          50%{
+            transform: rotate(0deg);
+            transform-origin: top;
+          }
+          75%{
+            transform: rotate(-10deg);
+            transform-origin: top;
+          }
+          100%{
+            transform: rotate(0deg);
+            transform-origin: top;
+          }
+        }
+    .zhi{
+      font-size: 70px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      color: #7f8081;
+      text-shadow: 0px 1px  0px #000 , 0px -1px  0px #fff;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box-dong">
+      <div class="yi">
+        <div class="yuan"></div>
+        <div class="huad">
+          <div class="tie"><p class="zhi">你</p></div>
+          <div class="gun">
+            <div class="quan"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yi">
+        <div class="yuan"></div>
+        <div class="huad2">
+          <div class="tie"><p class="zhi">是</p></div>
+          <div class="gun">
+            <div class="quan"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yi">
+        <div class="yuan"></div>
+        <div class="huad">
+          <div class="tie"><p class="zhi">大</p></div>
+          <div class="gun">
+            <div class="quan"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yi">
+        <div class="yuan"></div>
+        <div class="huad2">
+          <div class="tie"><p class="zhi">帅</p></div>
+          <div class="gun">
+            <div class="quan"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yi">
+        <div class="yuan"></div>
+        <div class="huad">
+          <div class="tie"><p class="zhi">逼</p></div>
+          <div class="gun">
+            <div class="quan"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

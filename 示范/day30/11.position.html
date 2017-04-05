@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地理定位</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	if (navigator.geolocation){
+		console.log("支持地理定位");
+	} else {
+		console.log("您的浏览器不支持地理定位");
+	}
+
+    function success(pos){
+        var coords = pos.coords;
+        console.log("经度" + coords.longitude + ",纬度" + coords.latitude);
+    }
+
+    function error(err){
+    	console.log(err.message + "   " + err.code);
+    }
+
+
+	navigator.geolocation.getCurrentPosition(success, error);
+</script>
+	
+</body>
+</html>

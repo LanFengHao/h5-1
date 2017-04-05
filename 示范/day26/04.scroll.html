@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面滚动</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.f {
+			width: 200px;
+			height: 200px;
+			margin: auto;
+			border: 1px solid red;
+			overflow: auto;
+		}
+
+		.s {
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="f">
+	<div class="s">
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+		司空见惯看大家看好看到机会抠脚大汉看见黑咖啡回家开发好看房交会开发
+	</div>
+</div>
+
+<button id="btn">点击查看滚动位置</button>
+<button id="btn1">点击滚动到最底部</button>
+
+
+<script type="text/javascript">
+
+    //querySelctor只获得第一个匹配的元素
+	var f = document.querySelector(".f");
+	var btn = document.querySelector("#btn");
+	var btn1 = document.querySelector("#btn1");
+
+	btn.onclick = function(){
+		console.log("scrollwidth", f.scrollWidth);
+		console.log("scrollheight",f.scrollHeight);
+
+		//滚动内容的偏移量，并不是滚动条的距离
+		console.log("scrollleft", f.scrollLeft);
+		console.log("scrolltop", f.scrollTop);
+	}
+
+	btn1.onclick = function(){
+		f.scrollTop = 600;
+		console.log("scrolltop", f.scrollTop);
+	}
+
+
+
+
+</script>
+
+
+
+	
+</body>
+</html>

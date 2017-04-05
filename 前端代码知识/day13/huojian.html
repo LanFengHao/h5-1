@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background-color: #5ebc5e;
+      }
+      .huo{
+        background-image: url(./13-image/img1/rocket.png);
+        width: 101px;
+        height: 190px;
+        position: absolute;
+        bottom: -150px;
+        left:-150px;
+        transform: rotate(45deg);
+        transition: all 1s ease-in;
+      }
+      .fw{
+        height: 1000px;
+        width: 50%;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="huo">
+    </div>
+    <div class="fw">
+
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".fw").hover(function() {
+          $(".huo").css({
+            "left":"900px",
+            "bottom": "500px"})
+        },function () {
+          $(".huo").css({
+            "left":"-150px",
+            "bottom": "-150px"})
+        })
+      })
+    </script>
+  </body>
+</html>

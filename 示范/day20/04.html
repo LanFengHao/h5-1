@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var a = [1, 2, 3, 4, 5, 6];
+
+    var sum = 0;
+
+    for (var i = 0; i < a.length; i++) {
+        sum += a[i];
+    }
+    a.forEach(function(e, i, a) {
+        sum += e;
+    });
+
+
+    var newArray = a.map(function(e, i, a) {
+        return e * e;
+    });
+    console.log(newArray);
+
+
+    a = [1, 2, 3, 4, 5, 6];
+    var result = a.filter(function(e, i, a) {
+        if (e % 2 == 0) {
+            return true;
+        }
+    });
+    console.log(a);
+    console.log(result);
+
+
+    a = [1, 2, 3, , , , , , 6, 8];
+    a = a.filter(function(e, i, a) {
+        return true; //将稀疏数组，变为密集的
+    });
+    console.log(a);
+
+
+
+   a = [1,2,3,4,5];
+    var sum = a.reduce(function(pre, cur, i, a) {
+    	console.log("pre = " +  pre + ", " + "cur = " + cur);
+        return pre +  cur;
+    }, 0);
+
+    console.log(sum);
+    </script>
+</body>
+
+</html>

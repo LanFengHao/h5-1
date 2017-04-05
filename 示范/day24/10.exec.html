@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>exec</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+	    var str = "The Quick Brown Fox Jumps Over The Lazy DogThe Quick Brown Fox Jumps Over The Lazy DogThe Quick Brown Fox Jumps Over The Lazy Dog";
+
+		var reg = /quick\s(brown).+?(jumps)/ig;
+		var result = null;
+
+        // exec要想进行全局匹配，那么必须进行循环操作 那.+?是什么意思呢。
+		while ((result = reg.exec(str)) != null ){
+			console.log(result);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reg</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var reg = /\D/;
+	console.log(reg.test("123456789!"));
+
+	reg = /\s/;
+	console.log(reg.test("12345678\t9!"));
+
+	reg = /\w/;
+	console.log(reg.test("abvcksdjkgjkgj"));
+
+	reg = /[0-9]/;//只要符合[]中的任意一个即可
+	console.log(reg.test("abc456abg"));
+
+	reg = /[a-zA-Z]/;
+
+	reg = /-/;
+	console.log(reg.test("hello-world"));
+
+
+    reg = /[^123]/; //^填写在[]的开始位置，表示取反
+	console.log(reg.test("123123123!"));
+
+
+	reg = /^hello/;// ^匹配开头
+	console.log(reg.test("worldhello"));
+	console.log(reg.test("helloworld"));
+
+	reg = /hello$/;
+	console.log(reg.test("worldhello"));
+
+	reg = /^hello$/;
+	console.log(reg.test("hello"));
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

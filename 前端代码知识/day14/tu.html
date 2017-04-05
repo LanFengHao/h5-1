@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+      .box{
+        height: 90px;
+        width: 900px;
+        margin: 400px auto;
+        overflow: hidden;
+        /*border:solid 1px #999;*/
+      }
+      .max-box{
+        height: 90px;
+        width: 2000px;
+        float: left;
+        position: relative;
+        left: 0px;
+        animation: dta 2s infinite ease;
+      }
+      @keyframes dta {
+        0%{
+          position: relative;
+          left: 0px;
+        }
+        100%{
+          position: relative;
+          left: -906px;
+        }
+
+      }
+      .ul{
+        list-style-type: none;
+        float: left;
+      }
+      .tt{
+        display: inline-block;
+        height: 88px;
+        width: 126px;
+      }
+      .tt1{
+        background-image: url(./14-image/1.jpg);
+      }
+      .tt2{
+        background-image: url(./14-image/2.jpg);
+      }
+      .tt3{
+        background-image: url(./14-image/3.jpg);
+      }
+      .tt4{
+        background-image: url(./14-image/4.jpg);
+      }
+      .tt5{
+        background-image: url(./14-image/5.jpg);
+      }
+      .tt6{
+        background-image: url(./14-image/6.jpg);
+      }
+      .tt7{
+        background-image: url(./14-image/7.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="max-box">
+        <ul class="zt">
+          <li class="tt1 tt"></li>
+          <li class="tt2 tt"></li>
+          <li class="tt3 tt"></li>
+          <li class="tt4 tt"></li>
+          <li class="tt5 tt"></li>
+          <li class="tt6 tt"></li>
+          <li class="tt7 tt"></li>
+          <li class="tt1 tt"></li>
+          <li class="tt2 tt"></li>
+          <li class="tt3 tt"></li>
+          <li class="tt4 tt"></li>
+          <li class="tt5 tt"></li>
+          <li class="tt6 tt"></li>
+          <li class="tt7 tt"></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

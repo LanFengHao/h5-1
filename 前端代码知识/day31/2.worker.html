@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>web worker</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var start = 100;
+      var work = new Worker("./worker.js");
+
+      work.onmessage = function(event) {
+
+        console.log(event.data);
+      }
+
+      work.postMessage(start);
+
+      work.onerror = function(event) {
+        console.log(event.message,event.filename,event.lineno);
+      }
+
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .box{
+        width: 400px;
+        margin:100px auto;
+        text-align: center;
+      }
+      .box-bu div{
+        text-align: left;
+        color: #f0f;
+        border-bottom: solid 1px #666;
+        height: 20px;
+        position: relative;
+      }
+      .box-bu div div{
+        color: red;
+        right: 0;
+        float: right;
+        cursor: pointer;
+
+      }
+      /*.f{
+        width:100px;
+        height: 100px;
+        background: gray;
+        position: relative;
+        left:100px;
+      }*/
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>发布消息</h1>
+      <textarea name="name" rows="8" cols="40" class="text"></textarea><br>
+      <button type="button" name="button" class="but">发布</button>
+      <div class="box-bu"></div>
+    </div>
+    <!-- <div class='f'>
+      <button class='son'>删除</button>
+    </div> -->
+  </body>
+  <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var bu = document.getElementsByClassName('but');
+    var txt = document.getElementsByClassName('text');
+    var box = document.getElementsByClassName('box-bu');
+    var s = 0;
+    var yc = box[0].childNodes;
+
+
+
+
+    function butClick(event) {
+      // console.log(txt[0].value);
+      var text = txt[0].value;
+      var boxText = document.createElement('div');
+      box[0].appendChild(boxText);
+      var w = box[0].lastElementChild;
+      console.log(w);
+      w.innerHTML=text;
+      txt[0].value = null;
+      // console.log($(yc));
+      $($(yc)).eq(s).append("<div>删除</div>");
+      // console.log($(yc));
+      s+=1;
+      $(function() {
+        $(".box-bu div div").click(function() {
+          var inx = $(".box-bu div div").index(this);
+          console.log(inx);
+          $(".box-bu>div:eq("+inx+")").css("display","none");
+        });
+      });
+
+    };
+    bu[0].addEventListener("click",butClick,false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $(".box-bu div div").click(console.log("aaa");)
+    //   function functionSca() {
+    //      $(".box-bu").offsetParent().css("display","none");
+    //    };
+    //
+
+
+
+    // for (var i = 0; i < yc.length; i++) {
+    //   // var inx = $(".box-bu>div:last").index(".box-bu>div");
+    //   console.log(i);
+    // var aaa = $(".a"+i+"").click(function() {})
+    // console.log(aaa);
+    //   }
+    //
+
+    // function shanChu(){
+    //
+    //   // var inx = $(".box-bu").index(".box-bu>div");
+    //   // var inx = yc.length
+    //   //   console.log(inx);
+    //   var oA=box[0].getElementsByTagName('div');
+    //   var oB=oA[0].getElementsByTagName('div')[0];
+    //   var cs=oB.getAttribute("class");
+    //   console.log(cs);
+    //     // oB.onclick=function(){
+    //   // box[0].removeChild(oA[0]);
+    //
+    //   // };
+    //  };
+    //
+
+    // $(function() {
+    //   $(".box-bu div:eq(0)").click(function() {
+    //     console.log("S");
+    //     // var inx = $(".box-bu>div").index(".box-bu>div");
+    //     // console.log(inx);
+    //   });
+    // })
+
+
+
+    // $('.son').click(function(){
+    //   $(this).offsetParent().css("display","none");
+    //   console.log('hahahah')
+    // });
+  </script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .box{
+      width: 400px;
+      height: 400px;
+      margin:100px auto;
+      text-align: center;
+    }
+    .text{
+      width: 400px;
+      height: 400px;
+      border:1px #999 solid;
+      text-align: left;
+    }
+    a{
+      color: red;
+    }
+    span{
+      color: red;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>敏感词标红</h1>
+      <div name="name" class="text" contenteditable="true"></div><br>
+      <button type="button" name="button" class="but">查找</button>
+      <button type="button" name="button" class="butq">清空</button>
+      <div class="box-bu"></div>
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        var sg = /薄熙来|周永康|习近平/;
+        console.log(sg);
+       $(".but").click(function functionName() {
+        var wb = $(".text").html();
+        // console.log(wb);
+        var sr = wb.split(sg);
+        // console.log(sr);
+        var sz = sr.join("<span>"+"我爱中国共产党"+"</span>");
+        $(".text").html(sz)
+       });
+       $(".butq").click(function functionName() {
+         $(".text").val(null).html(null);
+       });
+
+
+
+
+    });
+
+    </script>
+  </body>
+</html>

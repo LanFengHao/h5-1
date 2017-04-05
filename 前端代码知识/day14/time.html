@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>时钟</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .quan{
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+        border-radius:500px;
+        border: solid 20px #333;
+        /*overflow: hidden;*/
+        position: relative;
+      }
+      .sk1{
+        height: 500px;
+        width: 10px;
+        background-color: #666;
+        position: absolute;
+        left:245px;
+      }
+      .sk2{
+        height: 10px;
+        width: 500px;
+        background-color: #666;
+        position: absolute;
+        top:245px;
+      }
+      .sk3{
+        height: 5px;
+        width: 500px;
+        background-color: #666;
+        position: absolute;
+        top:245px;
+        transform: rotate(30deg);
+      }
+      .sk4{
+        height: 5px;
+        width: 500px;
+        background-color: #666;
+        position: absolute;
+        top:245px;
+        transform: rotate(60deg);
+      }
+      .sk5{
+        height: 5px;
+        width: 500px;
+        background-color: #666;
+        position: absolute;
+        top:245px;
+        transform: rotate(-30deg);
+      }
+      .sk6{
+        height: 5px;
+        width: 500px;
+        background-color: #666;
+        position: absolute;
+        top:245px;
+        transform: rotate(-60deg);
+      }
+      .gai{
+        height: 400px;
+        width: 400px;
+        border-radius: 400px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: #fff;
+      }
+      .zhong{
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        background-color: #000;
+        position: absolute;
+        top:225px;
+        left: 225px;
+        z-index: 1;
+      }
+      .shi{
+        height: 125px;
+        width: 15px;
+        background-color: #666;
+        position: absolute;
+        top: 125px;
+        left: 243px;
+        transform-origin: bottom;
+        animation: shiz 43200s infinite  linear;
+      }
+      .fen{
+        height: 175px;
+        width: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 75px;
+        left: 245px;
+        transform-origin: bottom;
+        animation: fenz 3600s infinite  linear;
+      }
+      .miao{
+        height: 200px;
+        width: 5px;
+        background-color:red;
+        position: absolute;
+        top: 50px;
+        left: 248px;
+        transform-origin: bottom;
+        animation: miaoz 60s infinite  linear;
+      }
+      @keyframes miaoz {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fenz {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes shiz {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quan">
+      <div class="sk1"></div>
+      <div class="sk2"></div>
+      <div class="sk3"></div>
+      <div class="sk4"></div>
+      <div class="sk3"></div>
+      <div class="sk4"></div>
+      <div class="sk5"></div>
+      <div class="sk6"></div>
+      <div class="gai"></div>
+      <div class="zhong"></div>
+      <div class="shi"></div>
+      <div class="fen"></div>
+      <div class="miao"></div>
+    </div>
+  </body>
+</html>

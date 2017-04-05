@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	  table {
+	  	width: 200px;
+	  	height: 200px;
+	  	border-collapse: collapse;
+	  	text-align: center;
+
+	  	box-shadow: 0px 0px  10px green;
+	  }
+
+	  table,tr,td {
+	  	border:1px solid gray;
+	  }
+
+	  tr:hover {
+	  	/*background: yellow;*/
+	  }
+		
+	</style>
+</head>
+<body>
+
+   <table>
+   	<tr>
+   		<td>1</td>
+   		<td>2</td>
+   		<td>3</td>
+   	</tr>
+   	<tr>
+   		<td>1</td>
+   		<td>2</td>
+   		<td>3</td>
+   	</tr>
+   	<tr>
+   		<td>1</td>
+   		<td>2</td>
+   		<td>3</td>
+   	</tr>
+   </table>
+
+   <script src="./js/jquery-3.0.0.min.js"></script>
+   <script>
+   	$(function(){
+
+   		$("table tr").hover(function(){
+   			$(this).css("backgroundColor", "yellow");
+   		}, function(){
+   			$(this).css("backgroundColor", "#fff");
+   		}); 
+   	});
+   </script>
+	
+</body>
+</html>

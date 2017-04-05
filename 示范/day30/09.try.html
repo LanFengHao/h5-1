@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>try</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		
+		try {
+
+			//可能会发生错误的代码
+			// fun();
+			console.log(a);
+			console.log("------");
+		} catch(e){
+			//捕获到发生的错误，执行此处的代码
+			console.log("catch ...");
+			console.log(e);
+
+			if (e instanceof ReferenceError){
+				console.log("reference");
+			} else {
+				console.log("other error");
+			}
+
+		 } finally {
+
+		 	//无论是否有错误，都会执行finally中的代码
+			console.log("正常运行");
+		 }
+
+
+
+
+
+		 /***************************************************/
+		 try {
+		 	throw new Error("自定义错误", "09.try.html", 41);
+		 } catch(e){
+		 	console.log(e.message);
+		 }
+
+		 console.log("运行完毕");
+
+
+
+
+	</script>
+</body>
+</html>

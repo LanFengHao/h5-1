@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM节点的操作</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .f {
+            width: 600px;
+            height: 100px;
+            border: 1px solid red;
+            font-size: 20px;
+            margin: auto;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img class="img-1" src="./images/1.jpg" alt="">
+
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+        //当整个页面的节点都解析完毕时，执行一个函数
+        $(document).ready(function() {
+            console.log($("img"));
+
+            $("<h1>这是新元素h1</h1>").appendTo("body");//将匹配的元素插入到目标元素的最后,内部插入
+            $("body").append("<h3>append方法添加的h3</h3>");//在每个匹配元素里面的末尾处插入参数内容。
+
+            $("<h2>这是新元素h2</h2>").prependTo("body");//将所有元素插入到目标前面（元素内）。
+
+            $("<p>要插入到img后边的新元素</p>").insertAfter(".img-1");//在目标元素后面插入集合中每个匹配的元素(愚人码头注：插入的元素作为目标元素的兄弟元素)。
+            $("<p>要插入到img前边的新元素</p>").insertBefore(".img-1");//在目标元素前面插入集合中每个匹配的元素(愚人码头注：插入的元素作为目标元素的兄弟元素)。
+
+
+            // jQuery 的链式调用, 都是针对同一元素的操作(因为每一个方法的返回值都是该元素本身)
+            $("<div>").html("<p><a href='#'>新创建的div</a></p>").appendTo("body");
+
+            alert($("body").html());//所有的内容都以字符串的形式输出
+
+
+        });
+    </script>
+</body>
+
+</html>

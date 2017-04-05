@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+   function sum(a, b){
+        var ret = Array.prototype.slice.call(arguments)
+        var aa = 0;
+        for (var i = 0; i < ret.length; i++) {
+          var aa = ret[i]+aa;
+        }
+        return aa;
+    }
+    function square(num){
+      return function() {
+        var ret = num.apply(null, arguments);
+        return ret*ret;
+      }
+    }
+    //
+    var odd = square(sum);
+    console.log(odd(9,8,7,6,5,4,3,2,1));
+    console.log()
+    </script>
+  </body>
+</html>

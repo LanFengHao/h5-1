@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .box{
+      position: absolute;
+      right: 300px;
+    }
+      ul{
+        padding: 0;
+        width: 150%;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+        border:1px #999 solid;
+        justify-content: space-around;
+        margin-bottom: 0;
+        position: relative;
+      }
+      li{
+        padding: 10px;
+        border: 1px #fff solid;
+        position: relative;
+        z-index: 100;
+      }
+      li:hover{
+        position: relative;
+        z-index: 100;
+        border: 1px red solid;
+        border-bottom: 1px #fff solid;
+      }
+      .max-ul{
+        width: 100%;
+        height:0px;
+        position: absolute;
+        top:46px;
+        overflow: hidden;
+        transition: 1s ease ;
+
+      }
+      .box ul li:hover ~div.max-ul{
+        border:1px red solid;
+        height: 500px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+      <div class="max-ul"></div>
+      </ul>
+    </div>
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        var ull = ['服装1','服装2','服装3','服装4','服装5','服装6','服装7','服装8','服装9'];
+        var aa = [9,8,7,6,5,4,3,2,1,0]
+          for (var i = 0; i < ull.length; i++) {
+            $(".box ul").prepend(
+              "<li>"+ull[i]+"</li>"
+            );
+            $("li").mousemove(function() {
+              var inx = $("li").index(this);
+              // console.log(inx);
+              $(".max-ul").html(aa[inx]);
+            });
+          };
+          $(".box ul li").after("<i>|</i>");
+          $(".box ul i:last").remove();
+      })
+    </script>
+  </body>
+</html>

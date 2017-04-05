@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>变量的作用域问题</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var a = 10; //全局变量
+        var b = 11;
+        console.log("外部的 a = " + a);
+        console.log("外部的 b = " + b);
+
+        function fun() {
+            // 函数内部的区域称之为局部作用域
+            // 出现同名变量时，局部变量会覆盖全局变量
+            var a = 20;
+            var c = 33;
+            console.log("内部的 a = " + a);
+            console.log("内部 c = " + c);
+            b = 21;//修改全局变量的值
+        }
+        fun();
+        console.log("外部的 b = " + b);
+        console.log("在外部访问 c = " + c);
+
+    </script>
+
+</body>
+
+</html>
